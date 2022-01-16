@@ -115,11 +115,8 @@ cc_prebuilt_library_shared {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libts_detected_face_hal.so"],
 		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libts_detected_face_hal.so"],
-		},
 	},
-	compile_multilib: "both",
+	compile_multilib: "32",
 	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
@@ -135,11 +132,8 @@ cc_prebuilt_library_shared {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libts_face_beautify_hal.so"],
 		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libts_face_beautify_hal.so"],
-		},
 	},
-	compile_multilib: "both",
+	compile_multilib: "32",
 	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
