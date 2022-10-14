@@ -824,7 +824,6 @@ PRODUCT_PACKAGES += \
     ims \
     qcrilmsgtunnel \
     com.qti.snapdragon.sdk.display \
-    vendor.qti.hardware.alarm-V1.0-java \
     com.qti.dpmframework \
     dpmapi \
     embmslibrary \
