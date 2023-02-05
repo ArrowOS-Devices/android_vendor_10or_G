@@ -36,11 +36,13 @@ ChromatixName :
 	If there is no tuning xml file remove the <ChromatixName> node.
 Position :
 	Position of the sensor module. Valid values are:
-	BACK, FRONT and BACK_AUX
+	BACK, FRONT, BACK_AUX and FRONT_AUX
 MountAngle :
 	Angle at which the sensor is mounted. Valid values are 0, 90, 180, 270 and 360.
 	To use default mountangle mentioned in kernel use 360.
-
+SensorSlaveAddress:
+    Sensor slave address. Should add this tag when sensor slave address in sensor
+    is different with defalt slave address in sensor driver.
 CsiInfo : This node contains information about the receiver configuration.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -84,6 +86,7 @@ LensInfo : Information of the lens present in the module.
 -->
 
 <CameraConfigurationRoot>
+  <!-- WENDELL-20170411 added for ZQL1590 rear camera OV13855_cbahc14_chicony -->
   <CameraModuleConfig>
     <CameraId>0</CameraId>
     <SensorName>ov13855_cbahc14_chicony</SensorName>
@@ -104,11 +107,12 @@ LensInfo : Information of the lens present in the module.
       <FocalLength>3.51</FocalLength>
       <FNumber>2.0</FNumber>
       <TotalFocusDistance>2.94</TotalFocusDistance>
-      <HorizontalViewAngle>63.81</HorizontalViewAngle>
+      <HorizontalViewAngle>67.81</HorizontalViewAngle>
       <VerticalViewAngle>53.04</VerticalViewAngle>
       <MinFocusDistance>0.1</MinFocusDistance>
     </LensInfo>
   </CameraModuleConfig>
+  <!-- WENDELL-20170412 added for ZQL1590 rear mono camera OV13358_cbahc13_mono_chicony -->
   <CameraModuleConfig>
     <CameraId>1</CameraId>
     <SensorName>ov13358_cbahc13_mono</SensorName>
@@ -134,6 +138,7 @@ LensInfo : Information of the lens present in the module.
       <MinFocusDistance>0.1</MinFocusDistance>
     </LensInfo>
   </CameraModuleConfig>
+  <!-- WENDELL-20170411 added for ZQL1590 rear camera OV13855_ohs0544 -->
   <CameraModuleConfig>
     <CameraId>0</CameraId>
     <SensorName>ov13855_ohs0544_ofg</SensorName>
@@ -159,6 +164,7 @@ LensInfo : Information of the lens present in the module.
       <MinFocusDistance>0.1</MinFocusDistance>
     </LensInfo>
   </CameraModuleConfig>
+  <!-- WENDELL-20170412 added for ZQL1590 rear mono camera OV13358_ohs0544_mono -->
   <CameraModuleConfig>
     <CameraId>1</CameraId>
     <SensorName>ov13358_ohs0544_mono</SensorName>
@@ -184,6 +190,7 @@ LensInfo : Information of the lens present in the module.
       <MinFocusDistance>0.1</MinFocusDistance>
     </LensInfo>
   </CameraModuleConfig>
+  <!-- WENDELL-20170412 added for ZQL1590 front camera s5k3p8_f3p8map -->
   <CameraModuleConfig>
     <CameraId>2</CameraId>
     <SensorName>s5k3p8</SensorName>
@@ -208,9 +215,11 @@ LensInfo : Information of the lens present in the module.
       <MinFocusDistance>0.1</MinFocusDistance>
     </LensInfo>
   </CameraModuleConfig>
+  <!-- loyalty[zhangdong5@huaqin.com]-20170516 added for ZQL1590 front camera ov16885_sunny -->
   <CameraModuleConfig>
     <CameraId>2</CameraId>
     <SensorName>ov16885_sunny</SensorName>
+	<ActuatorName>dw9718s</ActuatorName>
     <FlashName>pmic</FlashName>
     <EepromName>ov16885_fm24c64d</EepromName>
     <ChromatixName>ov16885_sunny_chromatix</ChromatixName>
